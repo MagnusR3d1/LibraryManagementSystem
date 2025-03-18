@@ -61,8 +61,9 @@ namespace LibraryManagementSystem
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1100, 35);
+            this.panel1.Size = new System.Drawing.Size(1467, 40);
             this.panel1.TabIndex = 0;
             // 
             // label2
@@ -70,9 +71,10 @@ namespace LibraryManagementSystem
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(13, 9);
+            this.label2.Location = new System.Drawing.Point(17, 10);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(281, 18);
+            this.label2.Size = new System.Drawing.Size(357, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Library Management System | Main Form";
             // 
@@ -82,9 +84,10 @@ namespace LibraryManagementSystem
             this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(1082, 9);
+            this.label1.Location = new System.Drawing.Point(1443, 10);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(14, 16);
+            this.label1.Size = new System.Drawing.Size(19, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "X";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -102,19 +105,22 @@ namespace LibraryManagementSystem
             this.panel2.Controls.Add(this.greet_label);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 35);
+            this.panel2.Location = new System.Drawing.Point(0, 40);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 565);
+            this.panel2.Size = new System.Drawing.Size(293, 652);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(49, 531);
+            this.label4.Location = new System.Drawing.Point(65, 613);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 16);
+            this.label4.Size = new System.Drawing.Size(65, 21);
             this.label4.TabIndex = 7;
             this.label4.Text = "Log out";
             // 
@@ -126,9 +132,10 @@ namespace LibraryManagementSystem
             this.logout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logout_btn.ForeColor = System.Drawing.Color.White;
             this.logout_btn.Image = global::LibraryManagementSystem.Properties.Resources.icons8_logout_rounded_up_filled_20px;
-            this.logout_btn.Location = new System.Drawing.Point(8, 522);
+            this.logout_btn.Location = new System.Drawing.Point(11, 602);
+            this.logout_btn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.logout_btn.Name = "logout_btn";
-            this.logout_btn.Size = new System.Drawing.Size(35, 35);
+            this.logout_btn.Size = new System.Drawing.Size(47, 40);
             this.logout_btn.TabIndex = 6;
             this.logout_btn.UseVisualStyleBackColor = true;
             this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
@@ -142,9 +149,10 @@ namespace LibraryManagementSystem
             this.returnBooks_btn.ForeColor = System.Drawing.Color.White;
             this.returnBooks_btn.Image = global::LibraryManagementSystem.Properties.Resources.icons8_return_32px_3;
             this.returnBooks_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.returnBooks_btn.Location = new System.Drawing.Point(8, 338);
+            this.returnBooks_btn.Location = new System.Drawing.Point(11, 390);
+            this.returnBooks_btn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.returnBooks_btn.Name = "returnBooks_btn";
-            this.returnBooks_btn.Size = new System.Drawing.Size(200, 45);
+            this.returnBooks_btn.Size = new System.Drawing.Size(267, 52);
             this.returnBooks_btn.TabIndex = 5;
             this.returnBooks_btn.Text = "RETURN BOOKS";
             this.returnBooks_btn.UseVisualStyleBackColor = true;
@@ -159,9 +167,10 @@ namespace LibraryManagementSystem
             this.issueBooks_btn.ForeColor = System.Drawing.Color.White;
             this.issueBooks_btn.Image = global::LibraryManagementSystem.Properties.Resources.icons8_book_32px_1;
             this.issueBooks_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.issueBooks_btn.Location = new System.Drawing.Point(8, 287);
+            this.issueBooks_btn.Location = new System.Drawing.Point(11, 331);
+            this.issueBooks_btn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.issueBooks_btn.Name = "issueBooks_btn";
-            this.issueBooks_btn.Size = new System.Drawing.Size(200, 45);
+            this.issueBooks_btn.Size = new System.Drawing.Size(267, 52);
             this.issueBooks_btn.TabIndex = 4;
             this.issueBooks_btn.Text = "ISSUE BOOKS";
             this.issueBooks_btn.UseVisualStyleBackColor = true;
@@ -176,9 +185,10 @@ namespace LibraryManagementSystem
             this.addBooks_btn.ForeColor = System.Drawing.Color.White;
             this.addBooks_btn.Image = global::LibraryManagementSystem.Properties.Resources.icons8_book_32px;
             this.addBooks_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addBooks_btn.Location = new System.Drawing.Point(8, 236);
+            this.addBooks_btn.Location = new System.Drawing.Point(11, 272);
+            this.addBooks_btn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.addBooks_btn.Name = "addBooks_btn";
-            this.addBooks_btn.Size = new System.Drawing.Size(200, 45);
+            this.addBooks_btn.Size = new System.Drawing.Size(267, 52);
             this.addBooks_btn.TabIndex = 3;
             this.addBooks_btn.Text = "ADD BOOKS";
             this.addBooks_btn.UseVisualStyleBackColor = true;
@@ -193,9 +203,10 @@ namespace LibraryManagementSystem
             this.dashboard_btn.ForeColor = System.Drawing.Color.White;
             this.dashboard_btn.Image = global::LibraryManagementSystem.Properties.Resources.icons8_dashboard_32px;
             this.dashboard_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dashboard_btn.Location = new System.Drawing.Point(8, 185);
+            this.dashboard_btn.Location = new System.Drawing.Point(11, 213);
+            this.dashboard_btn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dashboard_btn.Name = "dashboard_btn";
-            this.dashboard_btn.Size = new System.Drawing.Size(200, 45);
+            this.dashboard_btn.Size = new System.Drawing.Size(267, 52);
             this.dashboard_btn.TabIndex = 2;
             this.dashboard_btn.Text = "DASHBOARD";
             this.dashboard_btn.UseVisualStyleBackColor = true;
@@ -206,9 +217,10 @@ namespace LibraryManagementSystem
             this.greet_label.AutoSize = true;
             this.greet_label.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.greet_label.ForeColor = System.Drawing.Color.White;
-            this.greet_label.Location = new System.Drawing.Point(41, 131);
+            this.greet_label.Location = new System.Drawing.Point(55, 151);
+            this.greet_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.greet_label.Name = "greet_label";
-            this.greet_label.Size = new System.Drawing.Size(130, 19);
+            this.greet_label.Size = new System.Drawing.Size(160, 24);
             this.greet_label.TabIndex = 1;
             this.greet_label.Text = "Welcome, Admin";
             this.greet_label.Click += new System.EventHandler(this.greet_label_Click);
@@ -216,9 +228,10 @@ namespace LibraryManagementSystem
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(58, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(77, 32);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(133, 115);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -230,49 +243,55 @@ namespace LibraryManagementSystem
             this.panel3.Controls.Add(this.issueBooks1);
             this.panel3.Controls.Add(this.returnBooks1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(220, 35);
+            this.panel3.Location = new System.Drawing.Point(293, 40);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(880, 565);
+            this.panel3.Size = new System.Drawing.Size(1174, 652);
             this.panel3.TabIndex = 2;
             // 
             // dashboard1
             // 
             this.dashboard1.Location = new System.Drawing.Point(0, 0);
+            this.dashboard1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.dashboard1.Name = "dashboard1";
-            this.dashboard1.Size = new System.Drawing.Size(880, 565);
+            this.dashboard1.Size = new System.Drawing.Size(1173, 652);
             this.dashboard1.TabIndex = 3;
             this.dashboard1.Load += new System.EventHandler(this.dashboard1_Load);
             // 
             // addBooks1
             // 
             this.addBooks1.Location = new System.Drawing.Point(0, 0);
+            this.addBooks1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.addBooks1.Name = "addBooks1";
-            this.addBooks1.Size = new System.Drawing.Size(880, 565);
+            this.addBooks1.Size = new System.Drawing.Size(1173, 652);
             this.addBooks1.TabIndex = 2;
             // 
             // issueBooks1
             // 
             this.issueBooks1.Location = new System.Drawing.Point(0, 0);
+            this.issueBooks1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.issueBooks1.Name = "issueBooks1";
-            this.issueBooks1.Size = new System.Drawing.Size(880, 565);
+            this.issueBooks1.Size = new System.Drawing.Size(1173, 652);
             this.issueBooks1.TabIndex = 1;
             // 
             // returnBooks1
             // 
             this.returnBooks1.Location = new System.Drawing.Point(0, 0);
+            this.returnBooks1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.returnBooks1.Name = "returnBooks1";
-            this.returnBooks1.Size = new System.Drawing.Size(880, 565);
+            this.returnBooks1.Size = new System.Drawing.Size(1173, 652);
             this.returnBooks1.TabIndex = 0;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 600);
+            this.ClientSize = new System.Drawing.Size(1467, 692);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";

@@ -13,12 +13,13 @@ namespace LibraryManagementSystem
     public partial class MainForm : Form
     {
         private Timer inactivityTimer = new Timer();
-
-        
         private const int InactivityInterval = 300000;
-        public MainForm()
+        private string loggedInUsername;
+
+        public MainForm(string username)
         {
             InitializeComponent();
+            loggedInUsername = username;
             inactivityTimer.Interval = InactivityInterval;
             inactivityTimer.Tick += InactivityTimer_Tick;
             inactivityTimer.Start();
@@ -141,9 +142,14 @@ namespace LibraryManagementSystem
 
         private void greet_label_Click(object sender, EventArgs e)
         {
-            Profile lForm = new Profile();
+            Profile lForm = new Profile(loggedInUsername);
             lForm.Show();
             this.Hide();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

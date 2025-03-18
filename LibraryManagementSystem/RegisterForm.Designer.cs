@@ -51,10 +51,11 @@ namespace LibraryManagementSystem
             // register_showPass
             // 
             this.register_showPass.AutoSize = true;
-            this.register_showPass.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.register_showPass.Location = new System.Drawing.Point(183, 364);
+            this.register_showPass.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.register_showPass.Location = new System.Drawing.Point(244, 420);
+            this.register_showPass.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.register_showPass.Name = "register_showPass";
-            this.register_showPass.Size = new System.Drawing.Size(117, 20);
+            this.register_showPass.Size = new System.Drawing.Size(168, 25);
             this.register_showPass.TabIndex = 21;
             this.register_showPass.Text = "Show Password";
             this.register_showPass.UseVisualStyleBackColor = true;
@@ -68,11 +69,12 @@ namespace LibraryManagementSystem
             this.signIn_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.ForestGreen;
             this.signIn_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.ForestGreen;
             this.signIn_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.signIn_btn.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signIn_btn.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signIn_btn.ForeColor = System.Drawing.Color.White;
-            this.signIn_btn.Location = new System.Drawing.Point(20, 489);
+            this.signIn_btn.Location = new System.Drawing.Point(27, 548);
+            this.signIn_btn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.signIn_btn.Name = "signIn_btn";
-            this.signIn_btn.Size = new System.Drawing.Size(281, 30);
+            this.signIn_btn.Size = new System.Drawing.Size(375, 46);
             this.signIn_btn.TabIndex = 20;
             this.signIn_btn.Text = "SIGN IN";
             this.signIn_btn.UseVisualStyleBackColor = false;
@@ -81,12 +83,14 @@ namespace LibraryManagementSystem
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(116, 468);
+            this.label5.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(132, 510);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 14);
+            this.label5.Size = new System.Drawing.Size(173, 23);
             this.label5.TabIndex = 19;
             this.label5.Text = "Register Account";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // register_btn
             // 
@@ -96,11 +100,12 @@ namespace LibraryManagementSystem
             this.register_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.ForestGreen;
             this.register_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.ForestGreen;
             this.register_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.register_btn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.register_btn.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.register_btn.ForeColor = System.Drawing.Color.White;
-            this.register_btn.Location = new System.Drawing.Point(20, 410);
+            this.register_btn.Location = new System.Drawing.Point(27, 461);
+            this.register_btn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.register_btn.Name = "register_btn";
-            this.register_btn.Size = new System.Drawing.Size(281, 40);
+            this.register_btn.Size = new System.Drawing.Size(375, 46);
             this.register_btn.TabIndex = 18;
             this.register_btn.Text = "REGISTER";
             this.register_btn.UseVisualStyleBackColor = false;
@@ -109,58 +114,64 @@ namespace LibraryManagementSystem
             // register_password
             // 
             this.register_password.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.register_password.Location = new System.Drawing.Point(20, 328);
+            this.register_password.Location = new System.Drawing.Point(27, 378);
+            this.register_password.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.register_password.Multiline = true;
             this.register_password.Name = "register_password";
             this.register_password.PasswordChar = '*';
-            this.register_password.Size = new System.Drawing.Size(281, 30);
+            this.register_password.Size = new System.Drawing.Size(373, 34);
             this.register_password.TabIndex = 17;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 307);
+            this.label4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(23, 354);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 18);
+            this.label4.Size = new System.Drawing.Size(109, 23);
             this.label4.TabIndex = 16;
             this.label4.Text = "Password:";
             // 
             // register_username
             // 
             this.register_username.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.register_username.Location = new System.Drawing.Point(19, 268);
+            this.register_username.Location = new System.Drawing.Point(25, 309);
+            this.register_username.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.register_username.Multiline = true;
             this.register_username.Name = "register_username";
-            this.register_username.Size = new System.Drawing.Size(281, 30);
+            this.register_username.Size = new System.Drawing.Size(373, 34);
             this.register_username.TabIndex = 15;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 247);
+            this.label3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(21, 285);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 18);
+            this.label3.Size = new System.Drawing.Size(112, 23);
             this.label3.TabIndex = 14;
             this.label3.Text = "Username:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(98, 153);
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(131, 177);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 23);
+            this.label2.Size = new System.Drawing.Size(183, 29);
             this.label2.TabIndex = 13;
             this.label2.Text = "Registration Form";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(107, 51);
+            this.pictureBox1.Location = new System.Drawing.Point(143, 59);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(133, 115);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
@@ -171,8 +182,9 @@ namespace LibraryManagementSystem
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(320, 35);
+            this.panel1.Size = new System.Drawing.Size(427, 40);
             this.panel1.TabIndex = 11;
             // 
             // label1
@@ -181,9 +193,10 @@ namespace LibraryManagementSystem
             this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(298, 9);
+            this.label1.Location = new System.Drawing.Point(397, 10);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(14, 16);
+            this.label1.Size = new System.Drawing.Size(19, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "X";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -191,28 +204,30 @@ namespace LibraryManagementSystem
             // register_email
             // 
             this.register_email.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.register_email.Location = new System.Drawing.Point(19, 210);
+            this.register_email.Location = new System.Drawing.Point(25, 242);
+            this.register_email.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.register_email.Multiline = true;
             this.register_email.Name = "register_email";
-            this.register_email.Size = new System.Drawing.Size(281, 30);
+            this.register_email.Size = new System.Drawing.Size(373, 34);
             this.register_email.TabIndex = 23;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(16, 189);
+            this.label6.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(21, 218);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 18);
+            this.label6.Size = new System.Drawing.Size(152, 23);
             this.label6.TabIndex = 22;
             this.label6.Text = "Email Address:";
             // 
             // RegisterForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(320, 525);
+            this.ClientSize = new System.Drawing.Size(427, 606);
             this.Controls.Add(this.register_email);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.register_showPass);
@@ -227,6 +242,7 @@ namespace LibraryManagementSystem
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "RegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterForm";

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace LibraryManagementSystem
 {
@@ -65,8 +66,8 @@ namespace LibraryManagementSystem
                             {
                                 MessageBox.Show("Login Successfully!", "Information Message"
                                     , MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                                MainForm mForm = new MainForm();
+                                string username = login_username.Text.Trim();
+                                MainForm mForm = new MainForm(username);
                                 mForm.Show();
                                 this.Hide();
 
@@ -93,6 +94,11 @@ namespace LibraryManagementSystem
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
