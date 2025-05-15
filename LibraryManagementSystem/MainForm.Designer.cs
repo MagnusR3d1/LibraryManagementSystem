@@ -1,5 +1,5 @@
 ﻿
-namespace LibraryManagementSystem
+namespace FoodTicketingSystem
 {
     partial class MainForm
     {
@@ -36,17 +36,15 @@ namespace LibraryManagementSystem
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.logout_btn = new System.Windows.Forms.Button();
-            this.returnBooks_btn = new System.Windows.Forms.Button();
-            this.issueBooks_btn = new System.Windows.Forms.Button();
-            this.addBooks_btn = new System.Windows.Forms.Button();
+            this.AddItem = new System.Windows.Forms.Button();
             this.dashboard_btn = new System.Windows.Forms.Button();
             this.greet_label = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dashboard1 = new LibraryManagementSystem.Dashboard();
-            this.addBooks1 = new LibraryManagementSystem.AddBooks();
-            this.issueBooks1 = new LibraryManagementSystem.IssueBooks();
-            this.returnBooks1 = new LibraryManagementSystem.ReturnBooks();
+            this.Dashboard = new FoodTicketingSystem.Dashboard();
+            this.Addfoods = new FoodTicketingSystem.Addfoods();
+            this.MenuItems = new FoodTicketingSystem.MenuItems();
+            this.FufillOrders = new FoodTicketingSystem.FufillOrders();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -74,9 +72,9 @@ namespace LibraryManagementSystem
             this.label2.Location = new System.Drawing.Point(17, 10);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(357, 23);
+            this.label2.Size = new System.Drawing.Size(319, 23);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Library Management System | Main Form";
+            this.label2.Text = "Food Ticketing System | Admin Form";
             // 
             // label1
             // 
@@ -98,9 +96,7 @@ namespace LibraryManagementSystem
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.logout_btn);
-            this.panel2.Controls.Add(this.returnBooks_btn);
-            this.panel2.Controls.Add(this.issueBooks_btn);
-            this.panel2.Controls.Add(this.addBooks_btn);
+            this.panel2.Controls.Add(this.AddItem);
             this.panel2.Controls.Add(this.dashboard_btn);
             this.panel2.Controls.Add(this.greet_label);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -131,7 +127,7 @@ namespace LibraryManagementSystem
             this.logout_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
             this.logout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logout_btn.ForeColor = System.Drawing.Color.White;
-            this.logout_btn.Image = global::LibraryManagementSystem.Properties.Resources.icons8_logout_rounded_up_filled_20px;
+            this.logout_btn.Image = global::FoodTicketingSystem.Properties.Resources.icons8_logout_rounded_up_filled_20px;
             this.logout_btn.Location = new System.Drawing.Point(11, 602);
             this.logout_btn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.logout_btn.Name = "logout_btn";
@@ -140,59 +136,22 @@ namespace LibraryManagementSystem
             this.logout_btn.UseVisualStyleBackColor = true;
             this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
             // 
-            // returnBooks_btn
+            // AddItem
             // 
-            this.returnBooks_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.returnBooks_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSeaGreen;
-            this.returnBooks_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
-            this.returnBooks_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.returnBooks_btn.ForeColor = System.Drawing.Color.White;
-            this.returnBooks_btn.Image = global::LibraryManagementSystem.Properties.Resources.icons8_return_32px_3;
-            this.returnBooks_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.returnBooks_btn.Location = new System.Drawing.Point(11, 390);
-            this.returnBooks_btn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.returnBooks_btn.Name = "returnBooks_btn";
-            this.returnBooks_btn.Size = new System.Drawing.Size(267, 52);
-            this.returnBooks_btn.TabIndex = 5;
-            this.returnBooks_btn.Text = "RETURN BOOKS";
-            this.returnBooks_btn.UseVisualStyleBackColor = true;
-            this.returnBooks_btn.Click += new System.EventHandler(this.returnBooks_btn_Click);
-            // 
-            // issueBooks_btn
-            // 
-            this.issueBooks_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.issueBooks_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSeaGreen;
-            this.issueBooks_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
-            this.issueBooks_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.issueBooks_btn.ForeColor = System.Drawing.Color.White;
-            this.issueBooks_btn.Image = global::LibraryManagementSystem.Properties.Resources.icons8_book_32px_1;
-            this.issueBooks_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.issueBooks_btn.Location = new System.Drawing.Point(11, 331);
-            this.issueBooks_btn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.issueBooks_btn.Name = "issueBooks_btn";
-            this.issueBooks_btn.Size = new System.Drawing.Size(267, 52);
-            this.issueBooks_btn.TabIndex = 4;
-            this.issueBooks_btn.Text = "ISSUE BOOKS";
-            this.issueBooks_btn.UseVisualStyleBackColor = true;
-            this.issueBooks_btn.Click += new System.EventHandler(this.issueBooks_btn_Click);
-            // 
-            // addBooks_btn
-            // 
-            this.addBooks_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addBooks_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSeaGreen;
-            this.addBooks_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
-            this.addBooks_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addBooks_btn.ForeColor = System.Drawing.Color.White;
-            this.addBooks_btn.Image = global::LibraryManagementSystem.Properties.Resources.icons8_book_32px;
-            this.addBooks_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addBooks_btn.Location = new System.Drawing.Point(11, 272);
-            this.addBooks_btn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.addBooks_btn.Name = "addBooks_btn";
-            this.addBooks_btn.Size = new System.Drawing.Size(267, 52);
-            this.addBooks_btn.TabIndex = 3;
-            this.addBooks_btn.Text = "ADD BOOKS";
-            this.addBooks_btn.UseVisualStyleBackColor = true;
-            this.addBooks_btn.Click += new System.EventHandler(this.addBooks_btn_Click);
+            this.AddItem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddItem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.AddItem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.AddItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddItem.ForeColor = System.Drawing.Color.White;
+            this.AddItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddItem.Location = new System.Drawing.Point(11, 272);
+            this.AddItem.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.AddItem.Name = "AddItem";
+            this.AddItem.Size = new System.Drawing.Size(267, 52);
+            this.AddItem.TabIndex = 3;
+            this.AddItem.Text = "ADD ITEM";
+            this.AddItem.UseVisualStyleBackColor = true;
+            this.AddItem.Click += new System.EventHandler(this.addItems_btn_Click);
             // 
             // dashboard_btn
             // 
@@ -201,7 +160,7 @@ namespace LibraryManagementSystem
             this.dashboard_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
             this.dashboard_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dashboard_btn.ForeColor = System.Drawing.Color.White;
-            this.dashboard_btn.Image = global::LibraryManagementSystem.Properties.Resources.icons8_dashboard_32px;
+            this.dashboard_btn.Image = global::FoodTicketingSystem.Properties.Resources.icons8_dashboard_32px;
             this.dashboard_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.dashboard_btn.Location = new System.Drawing.Point(11, 213);
             this.dashboard_btn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -238,10 +197,10 @@ namespace LibraryManagementSystem
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.dashboard1);
-            this.panel3.Controls.Add(this.addBooks1);
-            this.panel3.Controls.Add(this.issueBooks1);
-            this.panel3.Controls.Add(this.returnBooks1);
+            this.panel3.Controls.Add(this.Dashboard);
+            this.panel3.Controls.Add(this.Addfoods);
+            this.panel3.Controls.Add(this.MenuItems);
+            this.panel3.Controls.Add(this.FufillOrders);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(293, 40);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -249,38 +208,38 @@ namespace LibraryManagementSystem
             this.panel3.Size = new System.Drawing.Size(1174, 652);
             this.panel3.TabIndex = 2;
             // 
-            // dashboard1
+            // Dashboard
             // 
-            this.dashboard1.Location = new System.Drawing.Point(0, 0);
-            this.dashboard1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.dashboard1.Name = "dashboard1";
-            this.dashboard1.Size = new System.Drawing.Size(1173, 652);
-            this.dashboard1.TabIndex = 3;
-            this.dashboard1.Load += new System.EventHandler(this.dashboard1_Load);
+            this.Dashboard.Location = new System.Drawing.Point(0, 0);
+            this.Dashboard.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.Dashboard.Name = "Dashboard";
+            this.Dashboard.Size = new System.Drawing.Size(1173, 652);
+            this.Dashboard.TabIndex = 3;
+            this.Dashboard.Load += new System.EventHandler(this.dashboard1_Load);
             // 
-            // addBooks1
+            // Addfoods
             // 
-            this.addBooks1.Location = new System.Drawing.Point(0, 0);
-            this.addBooks1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.addBooks1.Name = "addBooks1";
-            this.addBooks1.Size = new System.Drawing.Size(1173, 652);
-            this.addBooks1.TabIndex = 2;
+            this.Addfoods.Location = new System.Drawing.Point(0, 0);
+            this.Addfoods.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.Addfoods.Name = "Addfoods";
+            this.Addfoods.Size = new System.Drawing.Size(1173, 652);
+            this.Addfoods.TabIndex = 2;
             // 
-            // issueBooks1
+            // MenuItems
             // 
-            this.issueBooks1.Location = new System.Drawing.Point(0, 0);
-            this.issueBooks1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.issueBooks1.Name = "issueBooks1";
-            this.issueBooks1.Size = new System.Drawing.Size(1173, 652);
-            this.issueBooks1.TabIndex = 1;
+            this.MenuItems.Location = new System.Drawing.Point(0, 0);
+            this.MenuItems.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.MenuItems.Name = "MenuItems";
+            this.MenuItems.Size = new System.Drawing.Size(1173, 652);
+            this.MenuItems.TabIndex = 1;
             // 
-            // returnBooks1
+            // FufillOrders
             // 
-            this.returnBooks1.Location = new System.Drawing.Point(0, 0);
-            this.returnBooks1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.returnBooks1.Name = "returnBooks1";
-            this.returnBooks1.Size = new System.Drawing.Size(1173, 652);
-            this.returnBooks1.TabIndex = 0;
+            this.FufillOrders.Location = new System.Drawing.Point(0, 0);
+            this.FufillOrders.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.FufillOrders.Name = "FufillOrders";
+            this.FufillOrders.Size = new System.Drawing.Size(1173, 652);
+            this.FufillOrders.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -311,18 +270,16 @@ namespace LibraryManagementSystem
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button addBooks_btn;
+        private System.Windows.Forms.Button AddItem;
         private System.Windows.Forms.Button dashboard_btn;
         private System.Windows.Forms.Label greet_label;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button returnBooks_btn;
-        private System.Windows.Forms.Button issueBooks_btn;
         private System.Windows.Forms.Button logout_btn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
-        private ReturnBooks returnBooks1;
-        private Dashboard dashboard1;
-        private AddBooks addBooks1;
-        private IssueBooks issueBooks1;
+        private FufillOrders FufillOrders;
+        private Addfoods Addfoods;
+        private MenuItems MenuItems;
+        private Dashboard Dashboard;
     }
 }

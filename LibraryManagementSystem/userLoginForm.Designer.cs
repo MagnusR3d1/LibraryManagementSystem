@@ -1,7 +1,7 @@
 ﻿
 namespace FoodTicketingSystem
 {
-    partial class LoginForm
+    partial class userLoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace FoodTicketingSystem
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(userLoginForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -74,19 +74,19 @@ namespace FoodTicketingSystem
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(128, 182);
+            this.label2.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(100, 183);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(178, 29);
+            this.label2.Size = new System.Drawing.Size(194, 28);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Welcome, Admin!";
+            this.label2.Text = "Welcome, User!";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(17, 249);
+            this.label3.Location = new System.Drawing.Point(23, 249);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 23);
@@ -133,7 +133,7 @@ namespace FoodTicketingSystem
             this.loginBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.ForestGreen;
             this.loginBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.ForestGreen;
             this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginBtn.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBtn.ForeColor = System.Drawing.Color.White;
             this.loginBtn.Location = new System.Drawing.Point(27, 437);
             this.loginBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -148,7 +148,7 @@ namespace FoodTicketingSystem
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(142, 513);
+            this.label5.Location = new System.Drawing.Point(136, 522);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(173, 23);
@@ -164,7 +164,7 @@ namespace FoodTicketingSystem
             this.signupBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.ForestGreen;
             this.signupBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.ForestGreen;
             this.signupBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.signupBtn.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signupBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signupBtn.ForeColor = System.Drawing.Color.White;
             this.signupBtn.Location = new System.Drawing.Point(27, 548);
             this.signupBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -179,7 +179,7 @@ namespace FoodTicketingSystem
             // 
             this.login_showPass.AutoSize = true;
             this.login_showPass.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login_showPass.Location = new System.Drawing.Point(244, 396);
+            this.login_showPass.Location = new System.Drawing.Point(232, 394);
             this.login_showPass.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.login_showPass.Name = "login_showPass";
             this.login_showPass.Size = new System.Drawing.Size(168, 25);
@@ -199,7 +199,7 @@ namespace FoodTicketingSystem
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // LoginForm
+            // userLoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -219,7 +219,7 @@ namespace FoodTicketingSystem
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Name = "LoginForm";
+            this.Name = "userLoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
             this.Load += new System.EventHandler(this.LoginForm_Load);

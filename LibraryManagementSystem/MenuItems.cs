@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace LibraryManagementSystem
+namespace FoodTicketingSystem
 {
-    public partial class IssueBooks : UserControl
+    public partial class MenuItems : UserControl
     {
-        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User41\Documents\library.mdf;Integrated Security=True;Connect Timeout=30");
-        public IssueBooks()
+        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Documents\Library.mdf;Integrated Security=True;Connect Timeout=30");
+        public MenuItems()
         {
             InitializeComponent();
 
@@ -38,8 +38,8 @@ namespace LibraryManagementSystem
         public void displayBookIssueData()
         {
 
-            DataIssueBooks dib = new DataIssueBooks();
-            List<DataIssueBooks> listData = dib.IssueBooksData();
+            DataAdd2menu dib = new DataAdd2menu();
+            List<DataAdd2menu> listData = dib.IssueBooksData();
 
             dataGridView1.DataSource = listData;
         }

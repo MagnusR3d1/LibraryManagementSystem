@@ -8,12 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LibraryManagementSystem
+namespace FoodTicketingSystem
 {
     public partial class MainForm : Form
     {
         private Timer inactivityTimer = new Timer();
-        private const int InactivityInterval = 300000;
+        private const int InactivityInterval = 3000000;
         private string loggedInUsername;
 
         public MainForm(string username)
@@ -27,7 +27,7 @@ namespace LibraryManagementSystem
         }
         protected override void WndProc(ref Message m)
         {
-      
+
             const int WM_MOUSEMOVE = 0x0200;
             const int WM_KEYDOWN = 0x0100;
             if (m.Msg == WM_MOUSEMOVE || m.Msg == WM_KEYDOWN)
@@ -43,14 +43,14 @@ namespace LibraryManagementSystem
         }
         private void InactivityTimer_Tick(object sender, EventArgs e)
         {
-           
+
             inactivityTimer.Stop();
 
-          
+
             MessageBox.Show("Session timed out due to inactivity. You will be logged out.",
                 "Session Timeout", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-           
+
             AutoLogout();
         }
         private void AutoLogout()
@@ -70,7 +70,7 @@ namespace LibraryManagementSystem
         {
             DialogResult check = MessageBox.Show("Are you sure you want to logout?", "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if(check == DialogResult.Yes)
+            if (check == DialogResult.Yes)
             {
                 LoginForm lForm = new LoginForm();
                 lForm.Show();
@@ -81,12 +81,12 @@ namespace LibraryManagementSystem
 
         private void dashboard_btn_Click(object sender, EventArgs e)
         {
-            dashboard1.Visible = true;
-            addBooks1.Visible = false;
-            returnBooks1.Visible = false;
-            issueBooks1.Visible = false;
+            Dashboard.Visible = true;
+            Addfoods.Visible = false;
+            FufillOrders.Visible = false;
+            MenuItems.Visible = false;
 
-            Dashboard dForm = dashboard1 as Dashboard;
+            Dashboard dForm = Dashboard as Dashboard;
             if (dForm != null)
             {
                 dForm.refreshData();
@@ -95,26 +95,26 @@ namespace LibraryManagementSystem
 
         private void addBooks_btn_Click(object sender, EventArgs e)
         {
-            dashboard1.Visible = false;
-            addBooks1.Visible = true;
-            returnBooks1.Visible = false;
-            issueBooks1.Visible = false;
+            Dashboard.Visible = false;
+            Addfoods.Visible = true;
+            FufillOrders.Visible = false;
+            MenuItems.Visible = false;
 
-            AddBooks aForm = addBooks1 as AddBooks;
-            if(aForm != null)
+            Addfoods aForm = Addfoods as Addfoods;
+            if (aForm != null)
             {
                 aForm.refreshData();
             }
         }
 
-        private void issueBooks_btn_Click(object sender, EventArgs e)
+        private void ORDER_btn_Click(object sender, EventArgs e)
         {
-            dashboard1.Visible = false;
-            addBooks1.Visible = false;
-            returnBooks1.Visible = false;
-            issueBooks1.Visible = true;
+            Dashboard.Visible = false;
+            Addfoods.Visible = false;
+            FufillOrders.Visible = false;
+            MenuItems.Visible = true;
 
-            ReturnBooks rForm = returnBooks1 as ReturnBooks;
+            FufillOrders rForm = FufillOrders as FufillOrders;
             if (rForm != null)
             {
                 rForm.refreshData();
@@ -123,12 +123,12 @@ namespace LibraryManagementSystem
 
         private void returnBooks_btn_Click(object sender, EventArgs e)
         {
-            dashboard1.Visible = false;
-            addBooks1.Visible = false;
-            returnBooks1.Visible = true;
-            issueBooks1.Visible = false;
+            Dashboard.Visible = false;
+            Addfoods.Visible = false;
+            FufillOrders.Visible = true;
+            MenuItems.Visible = false;
 
-            IssueBooks iForm = issueBooks1 as IssueBooks;
+            MenuItems iForm = MenuItems as MenuItems;
             if (iForm != null)
             {
                 iForm.refreshData();
@@ -151,7 +151,22 @@ namespace LibraryManagementSystem
         {
 
         }
+
+        private void addItems_btn_Click(object sender, EventArgs e)
+        {
+            Dashboard.Visible = false;
+            Addfoods.Visible = true;
+            FufillOrders.Visible = false;
+            MenuItems.Visible = false;
+
+            Addfoods aForm = Addfoods as Addfoods;
+            if (aForm != null)
+            {
+                aForm.refreshData();
+            }
+        }
     }
+
 }
 
 

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LibraryManagementSystem
+namespace FoodTicketingSystem
 {
     public partial class Form1 : Form
     {
@@ -25,7 +25,7 @@ namespace LibraryManagementSystem
             {
                 timer1.Stop();
 
-                LoginForm lForm = new LoginForm();
+                Form2 lForm = new Form2();
                 lForm.Show();
                 this.Hide();
 
@@ -33,6 +33,11 @@ namespace LibraryManagementSystem
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

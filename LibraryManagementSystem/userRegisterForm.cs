@@ -9,16 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
+using System.Security.Cryptography;
 
 namespace FoodTicketingSystem
 
 {
 
-    public partial class RegisterForm : Form
+    public partial class userRegisterForm : Form
 
     {
+
         SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Documents\FoodD.mdf;Integrated Security=True;Connect Timeout=30");
-        public RegisterForm()
+
+        public userRegisterForm()
 
         {
 
@@ -30,14 +33,22 @@ namespace FoodTicketingSystem
 
         {
 
-            LoginForm lForm = new LoginForm();
+            userLoginForm lForm = new userLoginForm();
 
             lForm.Show();
 
-            this.Hide();
+            Hide();
 
         }
-
+        private string HashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = Encoding.UTF8.GetBytes(password);
+                byte[] hash = sha256.ComputeHash(bytes);
+                return BitConverter.ToString(hash).Replace("-", "").ToLower();
+            }
+        }
         private void label1_Click(object sender, EventArgs e)
 
         {
@@ -146,7 +157,7 @@ namespace FoodTicketingSystem
 
                     connect.Open();
 
-                    string checkUsername = "SELECT COUNT(*) FROM users WHERE username = @username";
+                    string checkUsername = "SELECT COUNT(*) FROM studentusers WHERE username = @username";
 
                     using (SqlCommand checkCMD = new SqlCommand(checkUsername, connect))
 
@@ -170,7 +181,7 @@ namespace FoodTicketingSystem
 
                             DateTime day = DateTime.Today;
 
-                            string insertData = "INSERT INTO users (email, username, password, date_register) VALUES(@email, @username, @password, @date)";
+                            string insertData = "INSERT INTO studentusers (email, username, password, date_register) VALUES(@email, @username, @password, @date)";
 
                             using (SqlCommand insertCMD = new SqlCommand(insertData, connect))
 
@@ -180,7 +191,8 @@ namespace FoodTicketingSystem
 
                                 insertCMD.Parameters.AddWithValue("@username", register_username.Text.Trim());
 
-                                insertCMD.Parameters.AddWithValue("@password", register_password.Text.Trim());
+                                string hashedPassword = HashPassword(register_password.Text.Trim());
+                                insertCMD.Parameters.AddWithValue("@password", hashedPassword);
 
                                 insertCMD.Parameters.AddWithValue("@date", day.ToString("yyyy-MM-dd"));
 
@@ -188,11 +200,11 @@ namespace FoodTicketingSystem
 
                                 MessageBox.Show("Register successfully!", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                LoginForm lForm = new LoginForm();
+                                userLoginForm lForm = new userLoginForm();
 
                                 lForm.Show();
 
-                                this.Hide();
+                                Hide();
 
                             }
 

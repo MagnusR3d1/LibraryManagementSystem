@@ -1,7 +1,7 @@
 ﻿
 namespace FoodTicketingSystem
 {
-    partial class RegisterForm
+    partial class userRegisterForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace FoodTicketingSystem
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(userRegisterForm));
             this.register_showPass = new System.Windows.Forms.CheckBox();
             this.signIn_btn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,11 +51,11 @@ namespace FoodTicketingSystem
             // register_showPass
             // 
             this.register_showPass.AutoSize = true;
-            this.register_showPass.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.register_showPass.Location = new System.Drawing.Point(244, 420);
+            this.register_showPass.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.register_showPass.Location = new System.Drawing.Point(228, 418);
             this.register_showPass.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.register_showPass.Name = "register_showPass";
-            this.register_showPass.Size = new System.Drawing.Size(168, 25);
+            this.register_showPass.Size = new System.Drawing.Size(174, 26);
             this.register_showPass.TabIndex = 21;
             this.register_showPass.Text = "Show Password";
             this.register_showPass.UseVisualStyleBackColor = true;
@@ -69,7 +69,7 @@ namespace FoodTicketingSystem
             this.signIn_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.ForestGreen;
             this.signIn_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.ForestGreen;
             this.signIn_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.signIn_btn.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signIn_btn.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signIn_btn.ForeColor = System.Drawing.Color.White;
             this.signIn_btn.Location = new System.Drawing.Point(27, 548);
             this.signIn_btn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -100,7 +100,7 @@ namespace FoodTicketingSystem
             this.register_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.ForestGreen;
             this.register_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.ForestGreen;
             this.register_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.register_btn.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.register_btn.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.register_btn.ForeColor = System.Drawing.Color.White;
             this.register_btn.Location = new System.Drawing.Point(27, 461);
             this.register_btn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -157,11 +157,11 @@ namespace FoodTicketingSystem
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(131, 177);
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(110, 177);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(183, 29);
+            this.label2.Size = new System.Drawing.Size(195, 30);
             this.label2.TabIndex = 13;
             this.label2.Text = "Registration Form";
             // 

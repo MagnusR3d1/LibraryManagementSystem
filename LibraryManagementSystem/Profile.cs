@@ -11,40 +11,65 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
-namespace LibraryManagementSystem
+namespace FoodTicketingSystem
 {
     public partial class Profile : Form
     {
-        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Documents\Library.mdf;Integrated Security=True;Connect Timeout=30");
-        private string originalUsername; 
+
+        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Documents\FoodD.mdf;Integrated Security=True;Connect Timeout=30");
+        private string originalUsername;
         public Profile(string loggedInUsername)
         {
             InitializeComponent();
-            originalUsername = loggedInUsername; 
-            LoadUserData(); 
+            originalUsername = loggedInUsername;
+            LoadUserData();
+           
+            LoadDataIntoDataGridView();
+            LoadFoodQuantityChart();
+
+        }
+        public void refreshData()
+        {
+
+            if (InvokeRequired)
+            {
+                Invoke((MethodInvoker)refreshData);
+                return;
+            }
+
         }
 
-      
         private void LoadUserData()
         {
             try
             {
                 connect.Open();
-                string query = "SELECT username, email, password FROM users WHERE username = @username"; // Adjust this query to match your database schema
+                string query = "SELECT username, email, password, image FROM users WHERE username = @username";
                 using (SqlCommand cmd = new SqlCommand(query, connect))
                 {
-                    cmd.Parameters.AddWithValue("@username", originalUsername); // Use the logged-in username
+                    cmd.Parameters.AddWithValue("@username", originalUsername);
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
                         {
-                           
                             update_username.Text = reader["username"].ToString();
                             update_email.Text = reader["email"].ToString();
                             update_password.Text = reader["password"].ToString();
+
+                            string imagePath = reader["image"].ToString();
+                            if (!string.IsNullOrEmpty(imagePath) && File.Exists(imagePath))
+                            {
+                                addBooks_picture.Image = Image.FromFile(imagePath);
+                                addBooks_picture.SizeMode = PictureBoxSizeMode.StretchImage;
+                            }
+                            else
+                            {
+                                addBooks_picture.Image = null; // Clear if no image found
+                            }
                         }
                         else
                         {
@@ -63,7 +88,8 @@ namespace LibraryManagementSystem
             }
         }
 
-        
+
+
         private void UpdateUserData(string oldUsername, string newEmail, string newUsername, string newPassword)
         {
             if (!IsValidEmail(newEmail))
@@ -99,7 +125,7 @@ namespace LibraryManagementSystem
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("User details updated successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        originalUsername = newUsername; 
+                        originalUsername = newUsername;
                     }
                     else
                     {
@@ -117,25 +143,25 @@ namespace LibraryManagementSystem
             }
         }
 
-       
+
         private bool IsValidEmail(string email)
         {
             return Regex.IsMatch(email, @"^[^\s@]+@cit\.edu$");
         }
 
-       
+
         private bool IsValidUsername(string username)
         {
             return Regex.IsMatch(username, @"^[A-Z][a-zA-Z0-9]{5,}$");
         }
 
-       
+
         private bool IsValidPassword(string password)
         {
             return Regex.IsMatch(password, @"^(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])(?=.*\d).{12,}$");
         }
 
-       
+
         private void register_showPass_CheckedChanged(object sender, EventArgs e)
         {
             update_password.PasswordChar = register_showPass.Checked ? '\0' : '*';
@@ -199,8 +225,9 @@ namespace LibraryManagementSystem
                     
                     File.Copy(imagePath, newFilePath, true);
 
-
-                    addBooks_picture.ImageLocation = newFilePath;
+                    
+                    addBooks_picture.Image = Image.FromFile(newFilePath);
+                    addBooks_picture.SizeMode = PictureBoxSizeMode.StretchImage; // Adjust size to fit
 
                     
                     SaveUserProfileImage(originalUsername, newFilePath);
@@ -212,7 +239,8 @@ namespace LibraryManagementSystem
             }
         }
 
-        
+
+
         private void SaveUserProfileImage(string username, string newFilePath)
         {
             try
@@ -244,6 +272,85 @@ namespace LibraryManagementSystem
             {
                 connect.Close();
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+        
+        private void dashboard_AB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void LoadDataIntoDataGridView()
+        {
+            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Documents\FoodD.mdf;Integrated Security=True;Connect Timeout=30"))
+            {
+                string query = "SELECT * FROM Orders"; 
+
+                SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
+
+                dataGridView1.DataSource = dataTable;
+            }
+        }
+        private void LoadFoodQuantityChart()
+        {
+            
+            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Documents\FoodD.mdf;Integrated Security=True;Connect Timeout=30"))
+            {
+                string query = @"
+                SELECT food_id, SUM(quantity) AS total_quantity
+                FROM Orders
+                GROUP BY food_id";
+
+                SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+
+                chart1.Series.Clear();
+                Series series = new Series("Quantity per Food ID");
+                series.ChartType = SeriesChartType.Column; // or .Pie, .Bar, etc.
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    int foodId = Convert.ToInt32(row["food_id"]);
+                    int totalQty = Convert.ToInt32(row["total_quantity"]);
+                    series.Points.AddXY(foodId, totalQty);
+                }
+
+                chart1.Series.Add(series);
+                chart1.ChartAreas[0].AxisX.Title = "Food ID";
+                chart1.ChartAreas[0].AxisY.Title = "Total Quantity Ordered";
+            }
+        }
+        private void dataGridView1_AutoSizeColumnsModeChanged(object sender, DataGridViewAutoSizeColumnsModeEventArgs e)
+        {
+            //dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+        }
+
+        private void register_showPass_CheckedChanged_1(object sender, EventArgs e)
+        {
+            update_password.PasswordChar = register_showPass.Checked ? '\0' : '*';
+        }
+        
+        private void refreshToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

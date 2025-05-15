@@ -1,4 +1,4 @@
-﻿namespace LibraryManagementSystem
+﻿namespace FoodTicketingSystem
 {
     partial class Profile
     {
@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.register_showPass = new System.Windows.Forms.CheckBox();
             this.signIn_btn = new System.Windows.Forms.Button();
             this.update_password = new System.Windows.Forms.TextBox();
@@ -42,50 +46,36 @@
             this.update_email = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.addBooks_importBtn = new System.Windows.Forms.Button();
-            this.addBooks_picture = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.logout_btn = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.dashboard_RB = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.dashboard_IB = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.dashboard_AB = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.addBooks_picture = new System.Windows.Forms.PictureBox();
+            this.refreshToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.addBooks_picture)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addBooks_picture)).BeginInit();
+            this.contextMenuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // register_showPass
             // 
             this.register_showPass.AutoSize = true;
             this.register_showPass.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.register_showPass.Location = new System.Drawing.Point(21, 446);
+            this.register_showPass.Location = new System.Drawing.Point(12, 446);
             this.register_showPass.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.register_showPass.Name = "register_showPass";
             this.register_showPass.Size = new System.Drawing.Size(148, 25);
             this.register_showPass.TabIndex = 34;
             this.register_showPass.Text = "Show Password";
             this.register_showPass.UseVisualStyleBackColor = true;
+            this.register_showPass.CheckedChanged += new System.EventHandler(this.register_showPass_CheckedChanged_1);
             // 
             // signIn_btn
             // 
@@ -171,7 +161,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1467, 40);
+            this.panel2.Size = new System.Drawing.Size(1467, 58);
             this.panel2.TabIndex = 1;
             // 
             // panel4
@@ -189,9 +179,10 @@
             this.label2.Location = new System.Drawing.Point(17, 10);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(357, 23);
+            this.label2.Size = new System.Drawing.Size(198, 23);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Library Management System | Main Form";
+            this.label2.Text = "Food Ticketing System";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -245,18 +236,6 @@
             this.addBooks_importBtn.UseVisualStyleBackColor = false;
             this.addBooks_importBtn.Click += new System.EventHandler(this.addBooks_importBtn_Click);
             // 
-            // addBooks_picture
-            // 
-            this.addBooks_picture.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.addBooks_picture.Location = new System.Drawing.Point(21, 23);
-            this.addBooks_picture.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.addBooks_picture.Name = "addBooks_picture";
-            this.addBooks_picture.Size = new System.Drawing.Size(247, 168);
-            this.addBooks_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.addBooks_picture.TabIndex = 37;
-            this.addBooks_picture.TabStop = false;
-            this.addBooks_picture.Click += new System.EventHandler(this.addBooks_picture_Click);
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
@@ -281,194 +260,6 @@
             this.panel3.Size = new System.Drawing.Size(293, 652);
             this.panel3.TabIndex = 39;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(65, 613);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 21);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Log out";
-            // 
-            // logout_btn
-            // 
-            this.logout_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logout_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSeaGreen;
-            this.logout_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
-            this.logout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logout_btn.ForeColor = System.Drawing.Color.White;
-            this.logout_btn.Image = global::LibraryManagementSystem.Properties.Resources.icons8_logout_rounded_up_filled_20px;
-            this.logout_btn.Location = new System.Drawing.Point(11, 602);
-            this.logout_btn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.logout_btn.Name = "logout_btn";
-            this.logout_btn.Size = new System.Drawing.Size(47, 40);
-            this.logout_btn.TabIndex = 6;
-            this.logout_btn.UseVisualStyleBackColor = true;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.panel6);
-            this.panel5.Controls.Add(this.panel7);
-            this.panel5.Controls.Add(this.panel8);
-            this.panel5.Location = new System.Drawing.Point(299, 55);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1155, 237);
-            this.panel5.TabIndex = 40;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(128)))), ((int)(((byte)(87)))));
-            this.panel6.Controls.Add(this.dashboard_RB);
-            this.panel6.Controls.Add(this.pictureBox3);
-            this.panel6.Controls.Add(this.label7);
-            this.panel6.Location = new System.Drawing.Point(780, 27);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(307, 173);
-            this.panel6.TabIndex = 4;
-            // 
-            // dashboard_RB
-            // 
-            this.dashboard_RB.AutoSize = true;
-            this.dashboard_RB.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dashboard_RB.ForeColor = System.Drawing.Color.White;
-            this.dashboard_RB.Location = new System.Drawing.Point(252, 122);
-            this.dashboard_RB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.dashboard_RB.Name = "dashboard_RB";
-            this.dashboard_RB.Size = new System.Drawing.Size(37, 41);
-            this.dashboard_RB.TabIndex = 2;
-            this.dashboard_RB.Text = "0";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::LibraryManagementSystem.Properties.Resources.icons8_book_60px_2;
-            this.pictureBox3.Location = new System.Drawing.Point(19, 43);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(80, 69);
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(121, 28);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(150, 24);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Returned Books";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(128)))), ((int)(((byte)(87)))));
-            this.panel7.Controls.Add(this.dashboard_IB);
-            this.panel7.Controls.Add(this.pictureBox2);
-            this.panel7.Controls.Add(this.label8);
-            this.panel7.Location = new System.Drawing.Point(415, 27);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(307, 173);
-            this.panel7.TabIndex = 3;
-            // 
-            // dashboard_IB
-            // 
-            this.dashboard_IB.AutoSize = true;
-            this.dashboard_IB.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dashboard_IB.ForeColor = System.Drawing.Color.White;
-            this.dashboard_IB.Location = new System.Drawing.Point(252, 122);
-            this.dashboard_IB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.dashboard_IB.Name = "dashboard_IB";
-            this.dashboard_IB.Size = new System.Drawing.Size(37, 41);
-            this.dashboard_IB.TabIndex = 2;
-            this.dashboard_IB.Text = "0";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::LibraryManagementSystem.Properties.Resources.icons8_books_60px_3;
-            this.pictureBox2.Location = new System.Drawing.Point(19, 43);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(80, 69);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(121, 28);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(127, 24);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Issued Books";
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(128)))), ((int)(((byte)(87)))));
-            this.panel8.Controls.Add(this.dashboard_AB);
-            this.panel8.Controls.Add(this.pictureBox1);
-            this.panel8.Controls.Add(this.label9);
-            this.panel8.Location = new System.Drawing.Point(48, 27);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(307, 173);
-            this.panel8.TabIndex = 0;
-            // 
-            // dashboard_AB
-            // 
-            this.dashboard_AB.AutoSize = true;
-            this.dashboard_AB.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dashboard_AB.ForeColor = System.Drawing.Color.White;
-            this.dashboard_AB.Location = new System.Drawing.Point(252, 122);
-            this.dashboard_AB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.dashboard_AB.Name = "dashboard_AB";
-            this.dashboard_AB.Size = new System.Drawing.Size(37, 41);
-            this.dashboard_AB.TabIndex = 2;
-            this.dashboard_AB.Text = "0";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::LibraryManagementSystem.Properties.Resources.icons8_book_stack_60px;
-            this.pictureBox1.Location = new System.Drawing.Point(19, 43);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 69);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(121, 28);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(150, 24);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Available Books";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(300, 298);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(1155, 385);
-            this.dataGridView1.TabIndex = 5;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(65)))), ((int)(((byte)(68)))));
@@ -488,13 +279,95 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(65, 613);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 21);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Log out";
+            // 
+            // logout_btn
+            // 
+            this.logout_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logout_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.logout_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.logout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logout_btn.ForeColor = System.Drawing.Color.White;
+            this.logout_btn.Image = global::FoodTicketingSystem.Properties.Resources.icons8_logout_rounded_up_filled_20px;
+            this.logout_btn.Location = new System.Drawing.Point(11, 602);
+            this.logout_btn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.logout_btn.Name = "logout_btn";
+            this.logout_btn.Size = new System.Drawing.Size(47, 40);
+            this.logout_btn.TabIndex = 6;
+            this.logout_btn.UseVisualStyleBackColor = true;
+            // 
+            // addBooks_picture
+            // 
+            this.addBooks_picture.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.addBooks_picture.Location = new System.Drawing.Point(21, 23);
+            this.addBooks_picture.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.addBooks_picture.Name = "addBooks_picture";
+            this.addBooks_picture.Size = new System.Drawing.Size(247, 168);
+            this.addBooks_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.addBooks_picture.TabIndex = 37;
+            this.addBooks_picture.TabStop = false;
+            this.addBooks_picture.Click += new System.EventHandler(this.addBooks_picture_Click);
+            // 
+            // refreshToolStripMenuItem1
+            // 
+            this.refreshToolStripMenuItem1.Name = "refreshToolStripMenuItem1";
+            this.refreshToolStripMenuItem1.Size = new System.Drawing.Size(127, 24);
+            this.refreshToolStripMenuItem1.Text = "Refresh";
+            this.refreshToolStripMenuItem1.Click += new System.EventHandler(this.refreshToolStripMenuItem1_Click);
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.refreshToolStripMenuItem1});
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(128, 28);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(300, 298);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 27;
+            this.dataGridView1.Size = new System.Drawing.Size(1155, 385);
+            this.dataGridView1.TabIndex = 5;
+            this.dataGridView1.AutoSizeColumnsModeChanged += new System.Windows.Forms.DataGridViewAutoSizeColumnsModeEventHandler(this.dataGridView1_AutoSizeColumnsModeChanged);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(300, 54);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(1155, 238);
+            this.chart1.TabIndex = 40;
+            this.chart1.Text = "chart1";
+            // 
             // Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1467, 692);
+            this.Controls.Add(this.chart1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -505,20 +378,12 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.addBooks_picture)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addBooks_picture)).EndInit();
+            this.contextMenuStrip2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -543,20 +408,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button logout_btn;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label dashboard_RB;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label dashboard_IB;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label dashboard_AB;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }

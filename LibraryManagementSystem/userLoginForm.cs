@@ -9,14 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Security.Cryptography;
 
 namespace FoodTicketingSystem
 {
-    public partial class LoginForm : Form
+    public partial class userLoginForm : Form
     {
         SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Documents\FoodD.mdf;Integrated Security=True;Connect Timeout=30");
 
-        public LoginForm()
+        public userLoginForm()
         {
             InitializeComponent();
         }
@@ -28,7 +29,7 @@ namespace FoodTicketingSystem
 
         private void signupBtn_Click(object sender, EventArgs e)
         {
-            RegisterForm rForm = new RegisterForm();
+            userRegisterForm rForm = new userRegisterForm();
             rForm.Show();
             this.Hide();
         }
@@ -53,11 +54,12 @@ namespace FoodTicketingSystem
                         connect.Open();
 
                         String selectData
-                            = "SELECT * FROM users WHERE username = @username AND password = @password";
+                            = "SELECT * FROM studentusers WHERE username = @username AND password = @password";
                         using (SqlCommand cmd = new SqlCommand(selectData, connect))
                         {
                             cmd.Parameters.AddWithValue("@username", login_username.Text.Trim());
-                            cmd.Parameters.AddWithValue("@password", login_password.Text.Trim());
+                            string hashedPassword = HashPassword(login_password.Text.Trim());
+                            cmd.Parameters.AddWithValue("@password", hashedPassword);
 
                             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                             DataTable table = new DataTable();
@@ -68,7 +70,7 @@ namespace FoodTicketingSystem
                                 MessageBox.Show("Login Successfully!", "Information Message"
                                     , MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 string username = login_username.Text.Trim();
-                                MainForm mForm = new MainForm(username);
+                                userMainForm mForm = new userMainForm(username);
                                 mForm.Show();
                                 this.Hide();
 
@@ -93,7 +95,15 @@ namespace FoodTicketingSystem
                 }
             }
         }
-
+        private string HashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = Encoding.UTF8.GetBytes(password);
+                byte[] hash = sha256.ComputeHash(bytes);
+                return BitConverter.ToString(hash).Replace("-", "").ToLower();
+            }
+        }
         private void LoginForm_Load(object sender, EventArgs e)
         {
 

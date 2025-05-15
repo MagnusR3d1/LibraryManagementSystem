@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace LibraryManagementSystem
+namespace FoodTicketingSystem
 {
-    class DataIssueBooks
+    class DataAdd2menu
     {
         SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Documents\Library.mdf;Integrated Security=True;Connect Timeout=30");
 
@@ -23,9 +23,9 @@ namespace LibraryManagementSystem
         public string DateReturn { set; get; }
         public string Status { set; get; }
 
-        public List<DataIssueBooks> IssueBooksData()
+        public List<DataAdd2menu> IssueBooksData()
         {
-            List<DataIssueBooks> listData = new List<DataIssueBooks>();
+            List<DataAdd2menu> listData = new List<DataAdd2menu>();
             if(connect.State != ConnectionState.Open)
             {
                 try
@@ -41,7 +41,7 @@ namespace LibraryManagementSystem
 
                         while (reader.Read())
                         {
-                            DataIssueBooks dib = new DataIssueBooks();
+                            DataAdd2menu dib = new DataAdd2menu();
                             dib.ID = (int)reader["id"];
                             dib.IssueID = reader["issued_id"].ToString();
                             dib.Name = reader["full_name"].ToString();
@@ -73,9 +73,9 @@ namespace LibraryManagementSystem
             return listData;
         }
 
-        public List<DataIssueBooks> ReturnIssueBooksData()
+        public List<DataAdd2menu> ReturnIssueBooksData()
         {
-            List<DataIssueBooks> listData = new List<DataIssueBooks>();
+            List<DataAdd2menu> listData = new List<DataAdd2menu>();
             if (connect.State != ConnectionState.Open)
             {
                 try
@@ -91,7 +91,7 @@ namespace LibraryManagementSystem
 
                         while (reader.Read())
                         {
-                            DataIssueBooks dib = new DataIssueBooks();
+                            DataAdd2menu dib = new DataAdd2menu();
                             dib.ID = (int)reader["id"];
                             dib.IssueID = reader["issued_id"].ToString();
                             dib.Name = reader["full_name"].ToString();
